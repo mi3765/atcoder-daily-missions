@@ -1,12 +1,18 @@
-"use client";
-import { Button } from "@material-tailwind/react";
+// UpdateButton.tsx
 
-export const UpdateButton = () => {
+import React from "react";
+
+type UpdateButtonProps = {
+	onClick: () => void;
+};
+
+export const UpdateButton: React.FC<UpdateButtonProps> = ({ onClick }) => {
 	return (
-		<div className="flex justify-center">
-			<Button variant="filled" placeholder={undefined}>
-				filled
-			</Button>
-		</div>
+		<button
+			className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md"
+			onClick={onClick}
+		>
+			問題を更新
+		</button>
 	);
 };
